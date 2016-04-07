@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class Movement : MonoBehaviour {
 
@@ -18,7 +19,9 @@ public class Movement : MonoBehaviour {
         float moveHorizontal = Input.GetAxis("Horizontal");
         float jmpmovement;
         bool jmp1 = Input.GetButtonDown("Jump");
-        bool jmp2 = Input.GetButton("Horizontal");
+		//The next line isnt used, so i commented it
+        //bool jmp2 = Input.GetButton("Horizontal");
+	
 
         if(moveHorizontal != 0)
         {
@@ -31,7 +34,8 @@ public class Movement : MonoBehaviour {
 
         if (jmp1.Equals(true))
         {
-            jmpmovement = 35f;
+			SceneManager.LoadScene ("Scenes/minigame");
+            jmpmovement = 100f;
         }
         else
         {
@@ -42,4 +46,16 @@ public class Movement : MonoBehaviour {
         
         rb2d.AddForce(movement * speed);
     }
+
+	void update()
+	{
+		bool z = Input.GetButtonDown("fire1");
+		if (z) 
+		{
+			
+			SceneManager.LoadScene ("minigame");
+		}
+
+	}
+
 }
