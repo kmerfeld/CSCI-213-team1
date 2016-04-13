@@ -29,7 +29,8 @@ public class PlayerController_minigame : MonoBehaviour {
 
 	void Update ()
 	{
-		if (Input.GetButton("Fire1") && Time.time > nextFire)
+        bool jmp1 = Input.GetButtonDown("Jump");
+        if (jmp1 && Time.time > nextFire)
 		{
 			nextFire = Time.time + fireRate;
 			Instantiate(shot, shotSpawn.position, shotSpawn.rotation);
