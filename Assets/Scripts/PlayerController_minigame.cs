@@ -1,11 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class PlayerController_minigame : MonoBehaviour {
 
 	public float speed;
 
 	private Rigidbody rb;
+	public string Level;
 
 
 	public GameObject shot;
@@ -13,6 +15,9 @@ public class PlayerController_minigame : MonoBehaviour {
 	public float fireRate;
 
 	private float nextFire;
+
+	public int maxShots;
+	private int shots_taken;
 
 	void Start ()
 	{
@@ -34,6 +39,11 @@ public class PlayerController_minigame : MonoBehaviour {
 		{
 			nextFire = Time.time + fireRate;
 			Instantiate(shot, shotSpawn.position, shotSpawn.rotation);
+
+			shots_taken++;
+			if (maxShots == shots_taken) {
+				SceneManager.LoadScene (Level);
+			}
 		}
 	}
 }

@@ -46,16 +46,5 @@ public class Movement : MonoBehaviour {
         
         rb2d.AddForce(movement * speed);
     }
-
-	void update()
-	{
-		bool z = Input.GetButtonDown("fire1");
-		if (z) 
-		{
-			
-			SceneManager.LoadScene ("minigame");
-		}
-
-	}
-
+		
 }

@@ -2,12 +2,9 @@
 using System.Collections;
 
 public class Minigame_collider : MonoBehaviour {
-    
+	public object s;
     void OnCollisionEnter(Collision col)
     {
-        //if (col.gameObject.tag == "Bullet")
-        {
-            Destroy(gameObject);
-        }
+    	Destroy(gameObject);
     }
 }
