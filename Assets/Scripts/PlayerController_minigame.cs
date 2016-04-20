@@ -8,7 +8,7 @@ public class PlayerController_minigame : MonoBehaviour {
 
 	private Rigidbody rb;
 	public string Level;
-
+   // private GameObject slider;
 
 	public GameObject shot;
 	public Transform shotSpawn;
@@ -19,10 +19,14 @@ public class PlayerController_minigame : MonoBehaviour {
 	public int maxShots;
 	private int shots_taken;
 
+
+
 	void Start ()
 	{
 		rb = GetComponent<Rigidbody>();
-	}
+       // slider = GameObject.FindGameObjectWithTag("HealthSlider");
+
+    }
 
 	void FixedUpdate ()
 	{
@@ -46,4 +50,5 @@ public class PlayerController_minigame : MonoBehaviour {
 			}
 		}
 	}
+    
 }
