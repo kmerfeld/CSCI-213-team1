@@ -51,9 +51,9 @@
      <Compile Include="Assets\Scripts\Minigame_collider.cs" />
      <Compile Include="Assets\Scripts\Movement.cs" />
      <Compile Include="Assets\Scripts\PlayerController_minigame.cs" />
+     <Compile Include="Assets\Scripts\Test_Mob_follow.cs" />
      <Compile Include="Assets\Scripts\bullet_movement.cs" />
      <Compile Include="Assets\Scripts\colide.cs" />
-     <Compile Include="Assets\text.cs" />
      <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/opt/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>

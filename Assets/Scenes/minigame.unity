@@ -559,7 +559,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e42136902c1c54b599474f80ceb496e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Level: level1
+  nextLevel: level1
+  thisLevel: minigame
   toBreak: 5
 --- !u!4 &412111392
 Transform:
@@ -937,11 +938,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 50
-  Level: level1
+  Level: minigame
   shot: {fileID: 108124, guid: e8383ca66499c4c2aa7ffdc706c09325, type: 2}
   shotSpawn: {fileID: 971237838}
   fireRate: 1
-  maxShots: 3
 --- !u!54 &489433493
 Rigidbody:
   m_ObjectHideFlags: 0
