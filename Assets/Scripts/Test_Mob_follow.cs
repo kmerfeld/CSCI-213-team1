@@ -44,7 +44,7 @@ public class Test_Mob_follow : MonoBehaviour {
 		{
 			
 			//if the player is above
-			if (playerTransform.position.y > rb.position.y + 1) 
+			if (playerTransform.position.y > rb.position.y + .9) 
 			{
 				
 				Destroy (gameObject);
