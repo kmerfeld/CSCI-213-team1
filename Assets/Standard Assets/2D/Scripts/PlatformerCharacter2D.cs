@@ -19,6 +19,7 @@ namespace UnityStandardAssets._2D
         private Animator m_Anim;            // Reference to the player's animator component.
         private Rigidbody2D m_Rigidbody2D;
         private bool m_FacingRight = true;  // For determining which way the player is currently facing.
+        private int health;
 
         private void Awake()
         {
@@ -27,6 +28,7 @@ namespace UnityStandardAssets._2D
             m_CeilingCheck = transform.Find("CeilingCheck");
             m_Anim = GetComponent<Animator>();
             m_Rigidbody2D = GetComponent<Rigidbody2D>();
+            health = 1;
         }
 
 
@@ -48,6 +50,25 @@ namespace UnityStandardAssets._2D
             m_Anim.SetFloat("vSpeed", m_Rigidbody2D.velocity.y);
         }
 
+        public void AddHealth(int h)
+        {
+            health += h;
+
+            if(health <= 0)
+            {
+                Destroy(gameObject);
+            }
+            if(health == 1)
+            {
+                GetComponent<SpriteRenderer>().color = Color.grey;
+            }
+            if(health >= 2)
+            {
+                GetComponent<SpriteRenderer>().color = Color.green;
+            }
+            
+
+        }
 
         public void Move(float move, bool crouch, bool jump)
         {
