@@ -1,11 +1,13 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/minigame_controller.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/ChangeLevel.cs">
     <Files>
-      <File FileName="Assets/Scripts/PlayerController_minigame.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/bullet_movement.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Movement.cs" Line="1" Column="1" />
-      <File FileName="Assets/minigame_controller.cs" Line="13" Column="2" />
+      <File FileName="Assets/Scripts/ChangeLevel.cs" Line="8" Column="2" />
+      <File FileName="Assets/Scripts/PlayerController_minigame.cs" Line="64" Column="4" NotebookId="1" />
+      <File FileName="Assets/Standard Assets/2D/Scripts/Platformer2DUserControl.cs" Line="1" Column="1" NotebookId="1" />
+      <File FileName="Assets/Standard Assets/2D/Scripts/PlatformerCharacter2D.cs" Line="29" Column="20" NotebookId="1" />
+      <File FileName="Assets/Scripts/colide.cs" Line="1" Column="1" NotebookId="1" />
+      <File FileName="Assets/Scripts/Minigame_collider.cs" Line="7" Column="5" NotebookId="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

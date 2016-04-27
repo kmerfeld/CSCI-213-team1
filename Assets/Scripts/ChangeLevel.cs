@@ -5,9 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class ChangeLevel : MonoBehaviour {
 	public string Level;
-	void OnCollisionEnter2D(Collision2D coll)
+	void OnCollisionEnter2D(Collision2D col)
 	{
-		SceneManager.LoadScene (Level);
-
+		if (col.gameObject.tag.Contains ("Player")) {
+			SceneManager.LoadScene (Level);
+		}
 	}
 }

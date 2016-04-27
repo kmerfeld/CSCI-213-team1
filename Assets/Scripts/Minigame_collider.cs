@@ -2,9 +2,13 @@
 using System.Collections;
 
 public class Minigame_collider : MonoBehaviour {
-	public object s;
+	//public Game other;
+
     void OnCollisionEnter(Collision col)
     {
     	Destroy(gameObject);
+		GameLoop.pops++;
     }
+
+		
 }

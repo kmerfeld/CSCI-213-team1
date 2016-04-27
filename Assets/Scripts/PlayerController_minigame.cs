@@ -8,7 +8,7 @@ public class PlayerController_minigame : MonoBehaviour {
 
 	private Rigidbody rb;
 	public string Level;
-
+   // private GameObject slider;
 
 	public GameObject shot;
 	public Transform shotSpawn;
@@ -16,34 +16,53 @@ public class PlayerController_minigame : MonoBehaviour {
 
 	private float nextFire;
 
-	public int maxShots;
-	private int shots_taken;
 
 	void Start ()
 	{
 		rb = GetComponent<Rigidbody>();
-	}
+
+    }
 
 	void FixedUpdate ()
 	{
+		//move left\right
 		float moveHorizontal = Input.GetAxis ("Horizontal");
-		//float moveVertical = Input.GetAxis ("Vertical");
 		Vector3 movement = new Vector3 (moveHorizontal, 0.0f, 0.0f);
 		rb.AddForce (movement * speed);
+
+		//jump
+		if (Input.GetButtonDown("Jump") && rb.transform.position.y < -8.6)
+		{
+			rb.AddForce (0, 700, 0);
+		}
 	}
 
 	void Update ()
 	{
-        bool jmp1 = Input.GetButtonDown("Jump");
+		//cheap walls
+		//keep player above ground
+		if (rb.position.y < -10) {
+			rb.AddForce (0, 200, 0);
+		}
+		//keep player inside arena
+		if (rb.position.x > 19) {
+			
+			rb.AddForce (-1000, 0, 0);
+		}
+		if (rb.position.x < -34) {
+			rb.AddForce (1000, 0, 0);
+		}
+		//fire bullets
+        bool jmp1 = Input.GetButtonDown("Fire3");
         if (jmp1 && Time.time > nextFire)
 		{
+			
 			nextFire = Time.time + fireRate;
 			Instantiate(shot, shotSpawn.position, shotSpawn.rotation);
 
-			shots_taken++;
-			if (maxShots == shots_taken) {
-				SceneManager.LoadScene (Level);
-			}
+			GameLoop.shots_taken++;
+
 		}
 	}
+    
 }

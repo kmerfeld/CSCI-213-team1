@@ -5,8 +5,6 @@ Project("{EFB54B41-EE83-C552-DDE1-BBF048C7372F}") = "CSCI-313-team1", "Assembly-
 EndProject
 Project("{EFB54B41-EE83-C552-DDE1-BBF048C7372F}") = "CSCI-313-team1", "Assembly-CSharp.csproj", "{424B0134-19E5-23A7-C77B-A09F2EF280AD}"
 EndProject
-Project("{EFB54B41-EE83-C552-DDE1-BBF048C7372F}") = "CSCI-313-team1", "Assembly-CSharp-Editor.csproj", "{7B8B321C-D4E7-69BB-A3F7-1F13351A7CCB}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,10 +19,6 @@ Global
 		{424B0134-19E5-23A7-C77B-A09F2EF280AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{424B0134-19E5-23A7-C77B-A09F2EF280AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{424B0134-19E5-23A7-C77B-A09F2EF280AD}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7B8B321C-D4E7-69BB-A3F7-1F13351A7CCB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7B8B321C-D4E7-69BB-A3F7-1F13351A7CCB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7B8B321C-D4E7-69BB-A3F7-1F13351A7CCB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7B8B321C-D4E7-69BB-A3F7-1F13351A7CCB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
