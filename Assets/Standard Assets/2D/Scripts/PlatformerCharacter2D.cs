@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using System.Collections;
 
 namespace UnityStandardAssets._2D
 {
@@ -31,6 +32,19 @@ namespace UnityStandardAssets._2D
             health = 1;
         }
 
+        public void UpdateSpeed(float s)
+        {
+            m_MaxSpeed = m_MaxSpeed * s;
+            StartCoroutine(Blah());
+
+            
+        }
+
+        public IEnumerator Blah()
+        {
+            yield return new WaitForSeconds(4);
+            m_MaxSpeed = 10f;
+        }
 
         private void FixedUpdate()
         {
