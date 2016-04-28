@@ -15,13 +15,21 @@ public class PlayerController_minigame : MonoBehaviour {
 	public float fireRate;
 
 	private float nextFire;
-
+	public AudioClip shootSound;
+	private AudioSource source;
+	private float volLowRange = .5f;
+	private float volHighRange = 1.0f;
 
 	void Start ()
 	{
 		rb = GetComponent<Rigidbody>();
 
     }
+	void Awake () {
+
+		source = GetComponent<AudioSource>();
+
+	}
 
 	void FixedUpdate ()
 	{
@@ -58,6 +66,8 @@ public class PlayerController_minigame : MonoBehaviour {
 		{
 			
 			nextFire = Time.time + fireRate;
+			float vol = Random.Range (volLowRange, volHighRange);
+			source.PlayOneShot(shootSound,vol);
 			Instantiate(shot, shotSpawn.position, shotSpawn.rotation);
 
 			GameLoop.shots_taken++;

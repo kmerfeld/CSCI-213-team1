@@ -9,5 +9,19 @@ EditorBuildSettings:
     path: Assets/Scenes/Main.unity
   - enabled: 1
     path: Assets/Scenes/level1.unity
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/minigame.unity
+  - enabled: 1
+    path: Assets/Scenes/Level2.unity
+  - enabled: 1
+    path: Assets/Scenes/level3.unity
+  - enabled: 1
+    path: Assets/Scenes/Level4.unity
+  - enabled: 1
+    path: Assets/Scenes/minigame1.unity
+  - enabled: 1
+    path: Assets/Scenes/minigame2.unity
+  - enabled: 1
+    path: Assets/Scenes/minigame3.unity
+  - enabled: 1
+    path: Assets/Scenes/minigame4.unity
