@@ -45,7 +45,17 @@ namespace UnityStandardAssets._2D
             yield return new WaitForSeconds(4);
             m_MaxSpeed = 10f;
         }
-
+        
+        public void UpdateJump(float t)
+        {
+            m_JumpForce = m_JumpForce * t;
+            StartCoroutine(Meh());
+        } 
+        public IEnumerator Meh()
+        {
+            yield return new WaitForSeconds(4);
+            m_JumpForce = m_JumpForce / 1.5f;
+        }
         private void FixedUpdate()
         {
             m_Grounded = false;
