@@ -55,18 +55,18 @@ public class PlayerController_minigame : MonoBehaviour {
 		//keep player inside arena
 		if (rb.position.x > 19) {
 			
-			rb.AddForce (-1000, 0, 0);
+			rb.AddForce (-1500, 0, 0);
 		}
 		if (rb.position.x < -34) {
-			rb.AddForce (1000, 0, 0);
+			rb.AddForce (1500, 0, 0);
 		}
 		//fire bullets
         bool jmp1 = Input.GetButtonDown("Fire3");
         if (jmp1 && Time.time > nextFire)
 		{
 			nextFire = Time.time + fireRate;
-			//float vol = Random.Range (volLowRange, volHighRange);
-			//source.PlayOneShot(shootSound,vol);
+			float vol = Random.Range (volLowRange, volHighRange);
+			source.PlayOneShot(shootSound,vol);
 			Instantiate(shot, shotSpawn.position, shotSpawn.rotation);
 
 			GameLoop.shots_taken++;
