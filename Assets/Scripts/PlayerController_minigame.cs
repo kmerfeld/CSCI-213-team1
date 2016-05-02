@@ -12,6 +12,7 @@ public class PlayerController_minigame : MonoBehaviour {
 
 	public GameObject shot;
 	public Transform shotSpawn;
+    public Transform position;
 	public float fireRate;
 
 	private float nextFire;
@@ -23,7 +24,6 @@ public class PlayerController_minigame : MonoBehaviour {
 	void Start ()
 	{
 		rb = GetComponent<Rigidbody>();
-
     }
 	void Awake () {
 
@@ -64,10 +64,9 @@ public class PlayerController_minigame : MonoBehaviour {
         bool jmp1 = Input.GetButtonDown("Fire3");
         if (jmp1 && Time.time > nextFire)
 		{
-			
 			nextFire = Time.time + fireRate;
-			float vol = Random.Range (volLowRange, volHighRange);
-			source.PlayOneShot(shootSound,vol);
+			//float vol = Random.Range (volLowRange, volHighRange);
+			//source.PlayOneShot(shootSound,vol);
 			Instantiate(shot, shotSpawn.position, shotSpawn.rotation);
 
 			GameLoop.shots_taken++;

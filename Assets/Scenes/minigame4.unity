@@ -285,7 +285,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e42136902c1c54b599474f80ceb496e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextLevel: level1
+  nextLevel: EndPage
   thisLevel: minigame4
   maxShots: 7
   toBreak: 5
