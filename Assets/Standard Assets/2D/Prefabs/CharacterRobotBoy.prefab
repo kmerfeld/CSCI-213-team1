@@ -256,6 +256,7 @@ MonoBehaviour:
   m_WhatIsGround:
     serializedVersion: 2
     m_Bits: 4294967295
+  level: level1
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1

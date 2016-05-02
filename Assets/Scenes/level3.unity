@@ -1774,6 +1774,10 @@ Prefab:
       propertyPath: m_LocalScale.x
       value: 0.57996523
       objectReference: {fileID: 0}
+    - target: {fileID: 11468218, guid: 195ef30e45bff48709abb2247da864c9, type: 2}
+      propertyPath: Level
+      value: minigame3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 195ef30e45bff48709abb2247da864c9, type: 2}
   m_IsPrefabParent: 0

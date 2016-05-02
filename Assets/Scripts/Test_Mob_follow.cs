@@ -57,6 +57,7 @@ namespace UnityStandardAssets._2D
                 }
                 else {
                     platformchar.AddHealth(-1);
+                    Destroy(gameObject);
                     
                 }
             }

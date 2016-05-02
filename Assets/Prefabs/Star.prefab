@@ -80,7 +80,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c6a8635bb14a214abf2f154983164ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreValue: 0
+  scoreValue: 10
 --- !u!212 &21208708
 SpriteRenderer:
   m_ObjectHideFlags: 1

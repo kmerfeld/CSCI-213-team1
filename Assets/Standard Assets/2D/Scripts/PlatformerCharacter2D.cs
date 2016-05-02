@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 namespace UnityStandardAssets._2D
 {
@@ -21,6 +22,9 @@ namespace UnityStandardAssets._2D
         private Rigidbody2D m_Rigidbody2D;
         private bool m_FacingRight = true;  // For determining which way the player is currently facing.
         private int health;
+        int scene;
+        
+        
 
         private void Awake()
         {
@@ -30,6 +34,7 @@ namespace UnityStandardAssets._2D
             m_Anim = GetComponent<Animator>();
             m_Rigidbody2D = GetComponent<Rigidbody2D>();
             health = 1;
+            scene = SceneManager.GetActiveScene().buildIndex;
         }
 
         public void UpdateSpeed(float s)
@@ -81,6 +86,7 @@ namespace UnityStandardAssets._2D
             if(health <= 0)
             {
                 Destroy(gameObject);
+                SceneManager.LoadScene(scene, LoadSceneMode.Single);
             }
             if(health == 1)
             {

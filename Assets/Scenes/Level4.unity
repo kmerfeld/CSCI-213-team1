@@ -10862,6 +10862,10 @@ Prefab:
       propertyPath: m_SortingLayerID
       value: -1858201647
       objectReference: {fileID: 0}
+    - target: {fileID: 11468218, guid: 195ef30e45bff48709abb2247da864c9, type: 2}
+      propertyPath: Level
+      value: minigame4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 195ef30e45bff48709abb2247da864c9, type: 2}
   m_IsPrefabParent: 0
